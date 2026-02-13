@@ -9,3 +9,5 @@ its monthly sales and profit. You will practice:
 • formatting output
 • thinking logically step by step
 This assignment focuses on core programming fundamentals, not advanced C++ features.
+
+#Assignment 2
