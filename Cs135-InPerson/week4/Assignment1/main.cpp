@@ -79,13 +79,7 @@ That means 6 total inputs:
     cin >> puzzlePackQuantity; 
     cout << "Puzzle pack cost: ";
     cin >> puzzlePackCost;
-//puzzle pack 
-    // int packQuantity; 
-    // double packCost; 
-    // cout << "Puzzle pack quantity: " ;
-    // cin >> packQuantity;
-    // cout << "Puzzle pack cost: ";
-    // cin >> packCost;  
+ 
 
     //total plushies toys puchased 
     int TOTAL_TOYS_PLUSHIES = PACK_SIZE * PlushPackQuantity; // total toys purchased 
@@ -94,17 +88,64 @@ That means 6 total inputs:
     double SALE_PRICE_PER_TOY_PLUSHIES = COST_PER_TOY_PLUSHIES + (COST_PER_TOY_PLUSHIES * MARKUP); // sale per toy
     double TOTAL_SALE_PRICE_PLUSHIES = SALE_PRICE_PER_TOY_PLUSHIES * TOTAL_TOYS_PLUSHIES; // total sale price (revenue ) 
     double PROFIT_PER_TOY_PLUSHIES = SALE_PRICE_PER_TOY_PLUSHIES - COST_PER_TOY_PLUSHIES; // profit per toy 
-    double TOTAL_PROFIT = PROFIT_PER_TOY_PLUSHIES * TOTAL_TOYS_PLUSHIES; // total profit 
+    double TOTAL_PROFIT_PLUSHIES = PROFIT_PER_TOY_PLUSHIES * TOTAL_TOYS_PLUSHIES; // total profit 
 
-    cout << "[Plushies]\\n" << endl; 
+    cout << "\n[Plushies]" << endl; 
     cout << "Total toys purchased: " << TOTAL_TOYS_PLUSHIES << endl;
     cout << fixed << setprecision(2);
-    cout << "Single Toy Cost: " << COST_PER_TOY_PLUSHIES << endl;
+    cout << "Single Toy Cost: $" << COST_PER_TOY_PLUSHIES << endl;
     cout << "Total cost: $" << TOTAL_COST_PLUSHIES << endl;
     cout << "Single Toy Sale price: $" << SALE_PRICE_PER_TOY_PLUSHIES << endl;
     cout << "Total Sale Price: $" << TOTAL_SALE_PRICE_PLUSHIES << endl;
     cout << "Profit per toy: $" << PROFIT_PER_TOY_PLUSHIES << endl;
-    cout << "Total profit: $" << TOTAL_PROFIT << endl;
-    return 0; 
+    cout << "Total profit: $" << TOTAL_PROFIT_PLUSHIES << endl;
+
+    int TOTAL_TOYS_ACTION_FIGURES = PACK_SIZE * ActionFigurePackQuantity;
+    double COST_PER_TOY_ACTION_FIGURES = actionFigurePackCost / PACK_SIZE;
+    double TOTAL_COST_ACTION_FIGURES = actionFigurePackCost * ActionFigurePackQuantity; 
+    double SALE_PRICE_PER_TOY_ACTION_FIGURES = COST_PER_TOY_ACTION_FIGURES  + (COST_PER_TOY_ACTION_FIGURES * MARKUP ); 
+    double TOTAL_SALE_PRICE_ACTION_FIGURES = SALE_PRICE_PER_TOY_ACTION_FIGURES * TOTAL_TOYS_ACTION_FIGURES ;
+    double PROFIT_PER_TOY_ACTION_FIGURES = SALE_PRICE_PER_TOY_ACTION_FIGURES - COST_PER_TOY_ACTION_FIGURES; 
+    double TOTAL_PROFIT_ACTION_FIGURES = PROFIT_PER_TOY_ACTION_FIGURES * TOTAL_TOYS_ACTION_FIGURES; 
+
+    cout << "\n[Action Figures]" << endl; 
+    cout << "Total toys purchased: " << TOTAL_TOYS_ACTION_FIGURES << endl;
+    cout << fixed << setprecision(2);
+    cout << "Single Toy Cost: $" << COST_PER_TOY_ACTION_FIGURES << endl;
+    cout << "Total cost: $" << TOTAL_COST_ACTION_FIGURES << endl;
+    cout << "Single Toy Sale price: (Revenue) $" << SALE_PRICE_PER_TOY_ACTION_FIGURES << endl;
+    cout << "Total Sale Price: $" << TOTAL_SALE_PRICE_ACTION_FIGURES << endl;
+    cout << "Profit per toy: $" << PROFIT_PER_TOY_ACTION_FIGURES << endl;
+    cout << "Total profit: $" << TOTAL_PROFIT_ACTION_FIGURES << endl;
+
+
+    int TOTAL_TOYS_PUZZLES = PACK_SIZE * puzzlePackQuantity;
+    double COST_PER_TOY_PUZZLES = puzzlePackCost / PACK_SIZE;
+    double TOTAL_COST_PUZZLES = puzzlePackCost * puzzlePackQuantity; 
+    double SALE_PRICE_PER_TOY_PUZZLES = COST_PER_TOY_PUZZLES  + (COST_PER_TOY_PUZZLES * MARKUP ); 
+    double TOTAL_SALE_PRICE_PUZZLES = SALE_PRICE_PER_TOY_PUZZLES * TOTAL_TOYS_PUZZLES ;
+    double PROFIT_PER_TOY_PUZZLES = SALE_PRICE_PER_TOY_PUZZLES - COST_PER_TOY_PUZZLES; 
+    double TOTAL_PROFIT_PUZZLES = PROFIT_PER_TOY_PUZZLES * TOTAL_TOYS_PUZZLES; 
+
+
+
+    cout << "\n[Puzzles]" << endl; 
+    cout << "Total toys purchased: " << TOTAL_TOYS_PUZZLES << endl;
+    cout << fixed << setprecision(2);
+    cout << "Single Toy Cost: $" << COST_PER_TOY_PUZZLES << endl;
+    cout << "Total cost: $" << TOTAL_COST_PUZZLES << endl;
+    cout << "Single Toy Sale price: (Revenue) $" << SALE_PRICE_PER_TOY_PUZZLES << endl;
+    cout << "Total Sale Price: $" << TOTAL_SALE_PRICE_PUZZLES << endl;
+    cout << "Profit per toy: $" << PROFIT_PER_TOY_PUZZLES << endl;
+    cout << "Total profit: $" << TOTAL_PROFIT_PUZZLES << endl;
+
+    double totalCost =  TOTAL_COST_ACTION_FIGURES + TOTAL_COST_PLUSHIES +  TOTAL_COST_PUZZLES; 
+    int TotalToysPurchased = TOTAL_TOYS_PUZZLES + TOTAL_TOYS_PLUSHIES + TOTAL_TOYS_ACTION_FIGURES;
+    cout <<"\n[Grand Totals]" << endl; 
+    cout << "Total Toys Purchased :" <<  TotalToysPurchased  << endl; 
+    cout << "Total Cost: $" << totalCost; 
+    cout << "Total Sale Price (Revenue): $" << SALE_PRICE_PER_TOY_ACTION_FIGURES + SALE_PRICE_PER_TOY_PLUSHIES + SALE_PRICE_PER_TOY_PUZZLES; 
+
+     return 0; 
     
 }
